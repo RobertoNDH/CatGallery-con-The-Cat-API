@@ -1,1 +1,78 @@
+#gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 20px;
+}
 
+.cat-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.cat-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+#btn-load-more {
+    margin: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.fav-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.3); 
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10; 
+}
+
+.fav-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.9);
+  color: #ff4d4d;
+}
+
+.fav-btn.active {
+  background-color: #ff4d4d; 
+  color: white;              
+  border-color: #ff4d4d;
+  transform: scale(1.2);     
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.6); 
+  animation: pulse-click 0.4s ease-out;
+}
+
+#gallery-container .fav-btn.active {
+  color: red; 
+  border-color: #ff4d4d;
+  transform: scale(1.2); 
+  background-color: #fff1f1;
+}
