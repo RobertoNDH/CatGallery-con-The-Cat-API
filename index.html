@@ -9,6 +9,15 @@
   <body>
     <div id="app">
       <h1>CatGallery</h1>
+
+      <nav class="navigation">
+        <button id="btn-home" class="nav-btn active">Inicio</button>
+        <button id="btn-favs" class="nav-btn">Mis Favoritos</button>
+      </nav>
+
+      <div id="loader" class="hidden">Buscando gatitos...</div>
+      <div id="status-message"></div>
+
       <div id="gallery-container"></div>
       <button id="btn-load-more">Ver más Gatos</button>
     </div>
